@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shyamala Siddaramaiah | Platform Engineer: DevOps, AIOps and MLOps</title>
+<meta name="description" content="Platform engineer with 7.6 years across AWS, Azure and GCP. DevOps, SRE, AIOps, MLOps, Kubernetes, CI/CD, GitOps.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EAF6FC;--surface:#FFFFFF;--ink:#000000;--mute:#3F5560;--line:#BFE0F0;--accent:#0A6EA0;--accent-ink:#FFFFFF;
+  --display:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;
+  --body:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#000000;--surface:#0D1114;--ink:#F2F8FB;--mute:#9FB3BF;--line:#1E2A31;--accent:#87CEEB;--accent-ink:#000000}
+}
+:root[data-theme="dark"]{--bg:#000000;--surface:#0D1114;--ink:#F2F8FB;--mute:#9FB3BF;--line:#1E2A31;--accent:#87CEEB;--accent-ink:#000000}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.65 var(--body);-webkit-text-size-adjust:100%}
+a{color:var(--accent)}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:68rem;margin:0 auto;padding:0 1.25rem}
+section{padding:4rem 0;border-top:1px solid var(--line)}
+h1,h2,h3{font-family:var(--display);line-height:1.1;margin:0}
+h2{font-size:clamp(1.6rem,4vw,2.2rem);font-weight:700;margin-bottom:.5rem}
+.lede{color:var(--mute);max-width:40rem;margin:0 0 2.2rem}
+
+/* hero */
+.hero{padding:5rem 0 4rem;border-top:0}
+.hero h1{font-size:clamp(2.6rem,9vw,6rem);font-weight:800;letter-spacing:-.03em;max-width:14ch}
+.hero .name{margin:2rem 0 .25rem;font:600 1.1rem var(--display)}
+.hero p{max-width:38rem;color:var(--mute);margin:.25rem 0}
+.hero-line{opacity:0;transform:translateY(14px);animation:rise .7s ease forwards}
+.hero-line:nth-child(2){animation-delay:.15s}
+.hero-line:nth-child(3){animation-delay:.3s}
+@keyframes rise{to{opacity:1;transform:none}}
+.cta{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.75rem}
+.btn{display:inline-block;padding:.7rem 1.2rem;border-radius:8px;font-weight:600;text-decoration:none;border:1.5px solid var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+
+/* impact */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));gap:0;border:1px solid var(--line);border-radius:12px;background:var(--surface);overflow:hidden}
+.stat{padding:1.4rem 1.25rem;border-right:1px solid var(--line);border-bottom:1px solid var(--line);margin:0 -1px -1px 0}
+.stat b{display:block;font:800 2.2rem/1 var(--display);color:var(--accent)}
+.stat span{display:block;margin-top:.5rem;font-size:.92rem;color:var(--mute)}
+
+/* pipeline */
+.pipe{list-style:none;margin:0;padding:0 0 0 2rem;position:relative}
+.pipe::before{content:"";position:absolute;left:.55rem;top:.6rem;bottom:.6rem;width:2px;background:var(--line)}
+.stage{position:relative;margin-bottom:2.2rem;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1.25rem 1.4rem}
+.stage::before{content:"";position:absolute;left:-1.78rem;top:1.5rem;width:.9rem;height:.9rem;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+.stage.now::before{background:var(--accent);box-shadow:0 0 0 5px color-mix(in srgb,var(--accent) 22%,transparent)}
+.stage h3{font-size:1.2rem;font-weight:700}
+.meta{margin:.2rem 0 .8rem;color:var(--mute);font-size:.92rem}
+.stage ul{margin:0;padding-left:1.1rem}
+.stage li{margin:.3rem 0;max-width:46rem}
+.badge{display:inline-block;margin-left:.5rem;padding:.1rem .55rem;border-radius:99px;background:var(--accent);color:var(--accent-ink);font:600 .75rem var(--body);vertical-align:middle}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1.25rem 2rem}
+.skills h3{font-size:1rem;font-weight:700;margin-bottom:.35rem}
+.skills p{margin:0;color:var(--mute)}
+
+/* certs */
+.certs{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem}
+.cert{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:8px;padding:1rem 1.1rem}
+.cert b{display:block;font-family:var(--display)}
+.cert span{color:var(--mute);font-size:.9rem}
+.edu{margin-top:2rem;color:var(--mute)}
+.edu b{color:var(--ink)}
+
+footer{padding:3rem 0 4rem;border-top:1px solid var(--line)}
+footer a{font-weight:600}
+@media (prefers-reduced-motion:reduce){.hero-line{animation:none;opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header class="wrap hero">
+  <h1 class="hero-line">Pipelines that ship. Clusters that stay up.</h1>
+  <p class="name hero-line">Shyamala Siddaramaiah, Platform Engineer (DevOps, AIOps, MLOps)</p>
+  <p class="hero-line">7.6 years building cloud-native platforms on AWS, Azure and GCP, from EKS and GitOps to AIOps and MLOps. Based in Bengaluru, India.</p>
+  <div class="cta hero-line">
+    <a class="btn primary" href="mailto:shyamalaskyblue@gmail.com">Email me</a>
+    <a class="btn" href="https://www.linkedin.com/in/shyamala-s-173382251">LinkedIn</a>
+  </div>
+</header>
+
+<main class="wrap">
+<section id="impact">
+  <h2>Results from past roles</h2>
+  <p class="lede">Measured outcomes from delivery, reliability, security and cost work.</p>
+  <div class="stats">
+    <div class="stat"><b>50%</b><span>faster environment provisioning with shared Terraform modules and Helm charts</span></div>
+    <div class="stat"><b>45%</b><span>shorter software delivery lead time</span></div>
+    <div class="stat"><b>60%</b><span>fewer open CVEs within 3 months</span></div>
+    <div class="stat"><b>35%</b><span>lower mean time to detect incidents</span></div>
+    <div class="stat"><b>30%</b><span>lower monthly cloud spend</span></div>
+    <div class="stat"><b>20+</b><span>on-premises workloads migrated to AWS</span></div>
+  </div>
+</section>
+
+<section id="work">
+  <h2>Experience</h2>
+  <p class="lede">Newest first. Each stage is a role, with the work that shipped from it.</p>
+  <ol class="pipe">
+    <li class="stage now">
+      <h3>Senior DevOps Engineer, ChargePoint<span class="badge">Current</span></h3>
+      <p class="meta">March 2026 to present</p>
+      <ul>
+        <li>Run highly available AWS infrastructure and EKS clusters, tuning for reliability, performance and resource use.</li>
+        <li>Deliver through Jenkins and Git-based pipelines, with ArgoCD for GitOps; provision with Terraform and CloudFormation.</li>
+        <li>Built observability with Datadog, Grafana and Splunk, and track SLOs, SLAs and KPIs.</li>
+        <li>Lead root cause analysis on production incidents and plan capacity for high-traffic distributed systems.</li>
+      </ul>
+    </li>
+    <li class="stage">
+      <h3>Senior Infrastructure Engineer, Publicis Sapient (client: Nissan)</h3>
+      <p class="meta">December 2025 to February 2026</p>
+      <ul>
+        <li>Supported Linux CI/CD servers, Jenkins build agents and AWS workloads, automating build and deploy checks with Bash.</li>
+        <li>Operated end-to-end ML pipelines from data to training, deployment and monitoring, with MLflow tracking and Kafka streaming.</li>
+        <li>Handled foundation model operations: RAG pipelines, vector stores, prompt and tool management, caching, routing and guardrails.</li>
+      </ul>
+    </li>
+    <li class="stage">
+      <h3>Site Reliability Engineer, Publicis Sapient (client: Morgan Stanley)</h3>
+      <p class="meta">August 2025 to November 2025</p>
+      <ul>
+        <li>Built DevSecOps and MLOps workflows for a global investment bank, with compliance checkpoints, image scanning and IAM hardening in every pipeline.</li>
+        <li>Managed enterprise EKS clusters with Helm governance, pod autoscaling and network policies.</li>
+      </ul>
+    </li>
+    <li class="stage">
+      <h3>Site Reliability Engineer, Publicis Sapient (client: Oman Telecommunications)</h3>
+      <p class="meta">October 2023 to July 2025</p>
+      <ul>
+        <li>Delivered multi-cloud architectures on AWS, Azure and GCP with Terraform, CloudFormation and Azure ARM.</li>
+        <li>Built Terraform modules and Helm charts used by 5+ teams, cutting provisioning time by 50%.</li>
+        <li>Containerized 10+ legacy applications and moved them to ECS, EKS, OpenShift and AKS.</li>
+        <li>Enforced zero-trust service traffic with Istio mTLS and secured secrets with HashiCorp Vault.</li>
+        <li>Cut mean time to detect incidents by 35% with Prometheus, Grafana, CloudWatch and the EFK stack.</li>
+      </ul>
+    </li>
+    <li class="stage">
+      <h3>DevSecOps Engineer, Dimensions Infotech (client: Kipi.bi)</h3>
+      <p class="meta">June 2022 to October 2023</p>
+      <ul>
+        <li>Cut delivery lead time by 45% with Jenkins and GitLab CI pipelines.</li>
+        <li>Reduced monthly cloud spend by 30% through right-sizing, auto-scaling and reserved capacity.</li>
+        <li>Automated vulnerability remediation, reducing open CVEs by 60% in 3 months.</li>
+        <li>Improved incident response time by 40% with Prometheus, Grafana and CloudWatch alerting.</li>
+      </ul>
+    </li>
+    <li class="stage">
+      <h3>DevOps Consultant, Dimension Pvt. Ltd</h3>
+      <p class="meta">January 2019 to October 2022</p>
+      <ul>
+        <li>Moved 20+ on-premises workloads to AWS, reducing operational overhead by 40%.</li>
+        <li>Moved teams from weekly to daily releases with Jenkins and GitHub pipelines.</li>
+        <li>Raised resource utilization by 35% with Docker and Kubernetes standards, and made Terraform and CloudFormation the organization's IaC practice.</li>
+        <li>Saved 15+ engineering hours a week by automating manual tasks with Python and shell scripts.</li>
+      </ul>
+    </li>
+  </ol>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills">
+    <div><h3>Cloud</h3><p>AWS (EKS, EC2, S3, IAM, VPC, ECS, ECR, CloudWatch, SageMaker, Bedrock, CodeGuru, Lambda), Azure, GCP</p></div>
+    <div><h3>Containers</h3><p>Kubernetes, Docker, Helm, OpenShift, AKS</p></div>
+    <div><h3>Infrastructure as code</h3><p>Terraform, CloudFormation, Azure ARM, Ansible</p></div>
+    <div><h3>CI/CD and GitOps</h3><p>Jenkins, GitHub Actions, GitLab, ArgoCD</p></div>
+    <div><h3>Observability</h3><p>Prometheus, Grafana, Datadog, Splunk, EFK stack</p></div>
+    <div><h3>Security</h3><p>HashiCorp Vault, SonarQube, Istio mTLS, IAM hardening</p></div>
+    <div><h3>MLOps</h3><p>MLflow, Kafka, RAG pipelines, vector stores</p></div>
+    <div><h3>Scripting and data</h3><p>Bash, Python, Groovy, PostgreSQL, DynamoDB</p></div>
+  </div>
+</section>
+
+<section id="certs">
+  <h2>Certifications</h2>
+  <div class="certs">
+    <div class="cert"><b>AWS Certified DevOps Engineer</b><span>Professional</span></div>
+    <div class="cert"><b>Certified Kubernetes Administrator</b><span>CKA</span></div>
+    <div class="cert"><b>Certified Kubernetes Application Developer</b><span>CKAD</span></div>
+    <div class="cert"><b>AWS Certified Machine Learning Engineer</b><span>MLA-C01</span></div>
+  </div>
+  <p class="edu"><b>Education:</b> M.Sc. in Information Technology, Assam Don Bosco University. B.E. in Electrical and Electronics Engineering, Rajeev Institute of Technology, Hassan (2017).</p>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <h2>Get in touch</h2>
+    <p class="lede">Open to a conversation about platform, DevOps and SRE work.</p>
+    <p><a href="mailto:shyamalaskyblue@gmail.com">shyamalaskyblue@gmail.com</a> &nbsp;|&nbsp; <a href="https://www.linkedin.com/in/shyamala-s-173382251">LinkedIn</a></p>
+  </div>
+</footer>
+</body>
+</html>
